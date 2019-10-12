@@ -11,13 +11,17 @@ class Header extends Component {
         <div className="flex flex-fixed black">
           <div className="fw7 mr1">Hacker News</div>
           <Link to="/" className="ml1 no-underline black">
-            New
+            new
+          </Link>
+          <div className="ml1">|</div>
+          <Link to="/search" className="ml1 no-underline black">
+            search
           </Link>
           {authToken && (
             <div className="flex">
               <div className="ml1">|</div>
               <Link to="/create" className="ml1 no-underline black">
-                Submit
+                submit
                 </Link>
             </div>
           )}
@@ -31,7 +35,7 @@ class Header extends Component {
                   this.props.history.push(`/`)
                 }}
               >
-                Logout
+                logout
               </div>
             ) : (
               <Link to="/login" className="ml1 no-underline black">
