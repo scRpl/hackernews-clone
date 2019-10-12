@@ -37,7 +37,11 @@ const post = (parent, args, context, info) => {
   return context.prisma.createLink({
     url: args.url,
     description: args.description,
-    postedBy: { connect: { id: userId } }
+    postedBy: {
+      connect: {
+        id: userId
+      }
+    }
   })
 }
 
